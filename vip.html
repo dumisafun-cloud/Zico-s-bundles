@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZICO — VIP Members</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="vip-style.css">
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <div class="brand">
+      <svg width="26" height="26" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M17 3 29 7v8.6c0 7.9-5.1 13-12 14.6-6.9-1.6-12-6.7-12-14.6V7L17 3Z" fill="var(--gold-soft)"/>
+        <path d="M17 3 29 7v8.6c0 7.9-5.1 13-12 14.6-6.9-1.6-12-6.7-12-14.6V7L17 3Z" stroke="var(--gold)" stroke-width="1.6"/>
+        <path d="M11.5 17.3 15.3 21 22.5 13.5" stroke="var(--gold)" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      ZICO <span class="badge">VIP</span>
+    </div>
+    <a class="btn dark" href="zico.html">← Back to ZICO</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <div class="kicker">Members only</div>
+    <h1>VIP Data Deals</h1>
+    <p>Create your VIP account with a once-off <strong>R40 account fee</strong> — this includes <strong>10GB of data</strong> loaded onto your number once the voucher is confirmed. After that, log in any time to redeem vouchers straight from your dashboard.</p>
+  </section>
+
+  <!-- Signed-out view -->
+  <div id="signedOut">
+    <section class="panel">
+      <h2>Create VIP account — R40 (includes 10GB)</h2>
+      <p class="sub">Pay the once-off R40 membership fee the same way you pay for data — with an OTT voucher — and receive <strong>10GB</strong> once it's confirmed. Enter an R40 voucher PIN below; it's emailed to us the moment you submit, and your login works every time after that.</p>
+      <form class="form" id="createForm" novalidate>
+        <div>
+          <label for="email">Email</label>
+          <input id="email" type="email" required placeholder="you@example.com">
+          <div class="field-error" id="emailError"></div>
+        </div>
+        <div>
+          <label for="password">Password</label>
+          <input id="password" type="password" minlength="8" required placeholder="At least 8 characters">
+          <div class="field-hint">Minimum 8 characters.</div>
+          <div class="field-error" id="passwordError"></div>
+        </div>
+        <div>
+          <label for="confirm">Confirm password</label>
+          <input id="confirm" type="password" minlength="8" required>
+          <div class="field-error" id="confirmError"></div>
+        </div>
+        <div>
+          <label for="accountFeePin">R40 OTT voucher PIN (account fee — includes 10GB)</label>
+          <input id="accountFeePin" type="text" required inputmode="numeric" placeholder="Enter your R40 OTT voucher PIN here">
+          <div class="field-hint">Numbers only, 12–20 digits — enter the full PIN exactly as printed.</div>
+          <div class="field-error" id="accountFeePinError"></div>
+        </div>
+        <div>
+          <label for="accountCell">Cell number to receive your 10GB</label>
+          <input id="accountCell" type="tel" required placeholder="e.g. 082 123 4567">
+          <div class="field-hint">10-digit SA mobile number, e.g. 0821234567.</div>
+          <div class="field-error" id="accountCellError"></div>
+        </div>
+        <button class="btn" type="submit">Send R40 voucher &amp; create account</button>
+      </form>
+      <div class="status" id="createStatus"></div>
+      <div class="note">Your R40 voucher PIN is your payment — send it only when you're ready. It's emailed to us immediately for confirmation, and includes 10GB loaded onto your number once confirmed. There is no card or EFT option on this page.</div>
+    </section>
+
+    <section class="panel">
+      <h2>Already a VIP member?</h2>
+      <p class="sub">Log in with the email and password you created.</p>
+      <form class="form" id="loginForm" novalidate>
+        <div>
+          <label for="loginEmail">Email</label>
+          <input id="loginEmail" type="email" required>
+        </div>
+        <div>
+          <label for="loginPassword">Password</label>
+          <input id="loginPassword" type="password" required>
+        </div>
+        <button class="btn" type="submit">Log in</button>
+      </form>
+      <div class="status" id="loginStatus"></div>
+    </section>
+  </div>
+
+  <!-- Signed-in dashboard -->
+  <div id="dashboard" class="hidden">
+    <section class="panel">
+      <div class="dash-header">
+        <div class="dash-id">
+          <div class="avatar" id="avatarInitial">?</div>
+          <div>
+            <div class="dash-email" id="dashEmail"></div>
+            <div class="status-pill">✓ VIP membership active</div>
+          </div>
+        </div>
+        <button class="btn dark" id="logoutBtn">Log out</button>
+      </div>
+    </section>
+
+    <section class="panel" id="vipPlans">
+      <div class="kicker">Choose a subscription</div>
+      <h2 style="margin-top:6px">VIP subscriptions</h2>
+      <p class="sub">Pick a plan — it will pre-fill the redeem form below so you can send your voucher right away.</p>
+      <div class="plans">
+        <div class="card"><div class="months">1 Month</div><div class="data">50GB + 50GB</div><div class="detail">Day + Night</div><div class="price">R150 OTT</div><button class="btn plan" data-plan="50GB + 50GB — 1 month — R150 OTT">Select</button></div>
+        <div class="card"><div class="months">3 Months</div><div class="data">100GB + 100GB</div><div class="detail">Day + Night</div><div class="price">R350 OTT</div><button class="btn plan" data-plan="100GB + 100GB — 3 months — R350 OTT">Select</button></div>
+        <div class="card"><div class="months">6 Months</div><div class="data">150GB + 150GB</div><div class="detail">Day + Night</div><div class="price">R590 OTT</div><button class="btn plan" data-plan="150GB + 150GB — 6 months — R590 OTT">Select</button></div>
+        <div class="card"><div class="months">12 Months</div><div class="data">200GB + 200GB</div><div class="detail">Day + Night</div><div class="price">R870 OTT</div><button class="btn plan" data-plan="200GB + 200GB — 12 months — R870 OTT">Select</button></div>
+      </div>
+    </section>
+
+    <section class="panel" id="redeemPanel">
+      <div class="kicker">Redeem</div>
+      <h2 style="margin-top:6px">Redeem your voucher</h2>
+      <p class="sub">Fill this in and it sends your voucher and details straight to us by email — no waiting, no extra steps.</p>
+      <form class="form" id="redeemForm" novalidate>
+        <div>
+          <label for="redeemPlan">Selected plan</label>
+          <input id="redeemPlan" type="text" placeholder="Choose a plan above" readonly>
+        </div>
+        <div class="form two-col">
+          <div>
+            <label for="redeemNetwork">Network</label>
+            <select id="redeemNetwork" required>
+              <option value="Vodacom">Vodacom</option>
+              <option value="MTN">MTN</option>
+              <option value="Cell C">Cell C</option>
+              <option value="Telkom">Telkom</option>
+            </select>
+          </div>
+          <div>
+            <label for="redeemCell">Cell number to receive data</label>
+            <input id="redeemCell" type="tel" placeholder="e.g. 082 123 4567" required>
+            <div class="field-hint">10-digit SA mobile number, e.g. 0821234567.</div>
+            <div class="field-error" id="redeemCellError"></div>
+          </div>
+        </div>
+        <div>
+          <label for="redeemPin">OTT voucher PIN (payment)</label>
+          <input id="redeemPin" type="text" placeholder="Enter the OTT voucher PIN here" required inputmode="numeric">
+          <div class="field-hint">Numbers only, 12–20 digits — enter the full PIN exactly as printed.</div>
+          <div class="field-error" id="redeemPinError"></div>
+        </div>
+        <div>
+          <label for="redeemNotes">Notes (optional)</label>
+          <textarea id="redeemNotes" rows="3" placeholder="Anything else we should know"></textarea>
+        </div>
+        <button class="btn" type="submit">Send voucher &amp; redeem</button>
+      </form>
+      <div class="status" id="redeemStatus"></div>
+      <div class="note">Your OTT voucher PIN is your payment. Double-check it before sending — it's emailed to us immediately when you submit.</div>
+    </section>
+
+    <section class="panel">
+      <div class="kicker">Your activity</div>
+      <h2 style="margin-top:6px">Redemption history</h2>
+      <div class="history" id="historyList">
+        <div class="empty-state">No redemptions yet — choose a plan above to get started.</div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>ZICO VIP — priority data deals for members.</div>
+    <div class="contact">VIP support: <a href="mailto:matibackubu@gmail.com">matibackubu@gmail.com</a></div>
+    <div>© 2026 ZICO. All rights reserved.</div>
+  </div>
+</footer>
+
+<script src="vip.js"></script>
+</body>
+</html>

